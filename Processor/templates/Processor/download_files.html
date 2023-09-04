@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Скачать файлы</title>
+</head>
+<body>
+    <h1>Файлы для скачивания</h1>
+    <ul>
+        {% for file, file_path in files %}
+            <li><a href="{{ file_path }}" download>{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'upload_file' %}">Вернуться на главную страницу</a><br>
+</body>
+</html>
